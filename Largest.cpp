@@ -18,7 +18,7 @@ int main()
     int n;
     cin >> n;
 
-    vetcor<int> arr(n);
+    vector<int> arr(n);
 
     for (int i = 0; i < n; i++)
     {
@@ -27,4 +27,4 @@ int main()
     cout << largest_element(arr, n);
 
     return 0;
-}
+} 
