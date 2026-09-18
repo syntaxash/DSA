@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-vector<int> union_array(vector<int> a, vector<int> b, int n1, int n2)
+vector<int> union_array(vector<int> a, vector<int> b)
 {
+    int n1 = a.size();
+    int n2 = b.size();
     int i = 0;
     int j = 0;
     vector<int> unionArr;
@@ -17,7 +19,7 @@ vector<int> union_array(vector<int> a, vector<int> b, int n1, int n2)
         }
         else
         {
-            if(unionArr.size() == 0 || unionArr.back() != b[j])
+            if (unionArr.size() == 0 || unionArr.back() != b[j])
             {
                 unionArr.push_back(b[j]);
             }
@@ -46,23 +48,18 @@ vector<int> union_array(vector<int> a, vector<int> b, int n1, int n2)
 int main()
 {
 
-    int n1;
+    int n1, n2;
     cin >> n1;
     vector<int> a(n1);
     for (int i = 0; i < n1; i++)
-    {
         cin >> a[i];
-    }
 
-    int n2;
     cin >> n2;
     vector<int> b(n2);
     for (int j = 0; j < n2; j++)
-    {
         cin >> b[j];
-    }
 
-    vector<int> result = union_array(a, b , n1 , n2);
+    vector<int> result = union_array(a, b);
 
     for (auto i : result)
     {
